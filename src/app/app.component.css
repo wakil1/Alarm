@@ -1,0 +1,21 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem; /* Adjust as needed */
+  }
+  .center-button {
+    padding: 0.75rem 1.5rem; /* Increased padding to make button bigger */
+    font-size: 1.2rem; /* Increased font size */
+    background-color: #00ff00; /* Bright green background */
+    color: #000000; /* Black text */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold; /* Makes the text stand out more */
+    text-transform: uppercase; /* Optional: makes text all caps for emphasis */
+  }
+  
+  .center-button:hover {
+    background-color: #00cc00; /* Darker green on hover */
+  }

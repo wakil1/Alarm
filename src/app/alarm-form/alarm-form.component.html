@@ -1,0 +1,33 @@
+<div (click)="getOut(false)" class="backdrop"></div>
+<dialog open >
+    <header class="dialog-header">
+        Edit Alarm
+    </header>
+    <form (ngSubmit)="onSubmit()">
+        <p>
+            <label for="hour" name="hour">Hours:</label>
+            <select id="hour" name="hour" [(ngModel)]="Hour" required>
+                @for( h of Hours; track h){
+                <option>{{ h }}</option>
+                }
+            </select>
+        </p>
+        <p>
+            <label for="minute" name="minute">Minute:</label>
+            <select id="minute" name="minute" [(ngModel)]="Minute" required>
+                @for( m of Minutes; track m){
+                <option>{{ m }}</option>
+                }
+            </select>
+        </p>
+        <p>
+            <label for="second" name="second">Seconds:</label>
+            <select id="second" name="second" [(ngModel)]="Second" required>
+                @for( s of Seconds; track s){
+                <option>{{ s }}</option>
+                }
+            </select>
+        </p>
+        <button type="submit" class="submit-button" mat-flat-button>Submit</button>
+    </form>
+</dialog>

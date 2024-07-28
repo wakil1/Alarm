@@ -1,0 +1,147 @@
+.centered-header {
+    text-align: center; /* Center text horizontally */
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Optional: Add padding for spacing */
+    font-size: 24px; /* Adjust font size as needed */
+    color: #060505; /* Optional: Change text color */
+}
+.dialog-header {
+    text-align: center; /* Center text horizontally */
+    font-size: 24px; /* Adjust font size */
+    margin: 0; /* Remove default margin */
+    color: #ffffff; /* White text color for contrast */
+    background-color: #000000; /* Black background for the header */
+    width: 100%; /* Full width of the dialog */
+    padding: 10px 0; /* Padding for the header */
+    border-radius: 8px 8px 0 0; /* Rounded corners on the top */
+}
+.backdrop {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  dialog {
+    width: 90%;
+    max-width: 30rem;
+    background-color: #433352;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    padding: 1rem;
+    top: 5rem;
+  }
+  
+  h2 {
+    margin: 0;
+    color: #d0c2e1;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #ab9ac0;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    font: inherit;
+    padding: 0.15rem 0.25rem;
+    border-radius: 4px;
+    border: 1px solid #ab9ac0;
+    background-color: #d0c2e1;
+  }
+  
+  .actions {
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25rem;
+  }
+  
+  button {
+    font: inherit;
+    cursor: pointer;
+    border: none;
+    padding: 0.35rem 1.25rem;
+    border-radius: 4px;
+    background-color: transparent;
+  }
+  
+  button[type="button"] {
+    color: #bdadcf;
+  }
+  
+  button[type="button"]:hover,
+  button[type="button"]:active {
+    color: #d0c2e1;
+  }
+  
+  button[type="submit"] {
+    background-color: #9c73ca;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  button[type="submit"]:hover,
+  button[type="submit"]:active {
+    background-color: #895cce;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  @media (min-width: 768px) {
+    dialog {
+      padding: 2rem;
+    }
+  }
+
+/* Dialog styles */
+dialog {
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the dialog */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    z-index: 1001; /* Ensure it is above the backdrop */
+}
+
+/* General styles for dropdowns */
+select {
+    font-size: 18px; /* Increase font size */
+    padding: 10px;   /* Increase padding */
+    height: 50px;    /* Set a fixed height */
+    width: 100%;      /* Full width */
+    border: 2px solid #ccc; /* Border styling */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Background color */
+    appearance: none; /* Remove default styling */
+}
+
+/* Optional: Change the style on focus */
+select:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Submit button styles */
+.submit-button {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding */
+    font-size: 18px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect for the submit button */
+.submit-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

@@ -1,0 +1,17 @@
+<div (click)="getOut(false)" class="backdrop"></div>
+<dialog open >
+    <header class="dialog-header">
+        Edit Alarm
+    </header>
+    <form (ngSubmit)="onSubmit()">
+        <p>
+            <label for="whiteNoise" name="whiteNoise">Hours:</label>
+            <select id="whiteNoise" name="whiteNoise" [(ngModel)]="whiteNoise" required>
+                @for( wNoise of whiteNoises; track wNoise){
+                <option>{{ wNoise }}</option>
+                }
+            </select>
+        </p>
+        <button type="submit" class="submit-button" mat-flat-button>Submit</button>
+    </form>
+</dialog>
