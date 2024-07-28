@@ -1,9 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup, FormsModule } from '@angular/forms';
+import {  FormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
-import { Alarm } from './alarm.model';
 import { alarmsService } from '../alarms.service';
 
 @Component({
@@ -18,11 +17,11 @@ export class AlarmFormComponent implements OnInit {
 
   @Output() shouldGetOut = new EventEmitter<boolean>();
   Hours: string[] = [];
-  Hour: string = '12PM';
+  Hour = '12PM';
   Minutes: number[] = [];
-  Minute: number = 59;
+  Minute = 59;
   Seconds: number[] = [];
-  Second: number = 59;
+  Second = 59;
   
 
   constructor(public myAlarmService: alarmsService){

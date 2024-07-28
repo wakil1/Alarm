@@ -1,5 +1,5 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
-import { alarmsService } from './whiteNoise.service';
+import { whiteNoiseService } from './whiteNoise.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class WhiteNoiseFormComponent {
   @Output() shouldGetOut = new EventEmitter<boolean>();
-  private aService = inject(alarmsService);
+  private aService = inject(whiteNoiseService);
 
   whiteNoises: string[]= this.aService.getAllWhiteNoise();
   whiteNoise: string= this.aService.getAllWhiteNoise()[0];
@@ -23,10 +23,8 @@ export class WhiteNoiseFormComponent {
   }
 
   onSubmit(){
-
-    console.log(this.whiteNoise);
-
     this.aService.selectedWhiteNoise(this.whiteNoise);
+    this.shouldGetOut.emit(false);
 
   }
 

@@ -1,14 +1,18 @@
 
 import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
 
 
 
 @Injectable({providedIn: 'root'})
-export class alarmsService {
+export class whiteNoiseService {
 
-whiteNoiseSelection:string='';
+    private whiteNoiseSelectionSubject = new BehaviorSubject<string>('');
 
-whiteNoise: string[]=['water','milk','towl','backyard'];
+    whiteNoiseSelection$ = this.whiteNoiseSelectionSubject.asObservable();
+
+
+whiteNoise: string[]=['whiteNoise'];
 
 
     getAllWhiteNoise() {
@@ -16,9 +20,8 @@ whiteNoise: string[]=['water','milk','towl','backyard'];
     }
 
     selectedWhiteNoise(whiteNoiseSelection: string) {
-        this.whiteNoiseSelection = whiteNoiseSelection;
-
-    }
+        this.whiteNoiseSelectionSubject.next(whiteNoiseSelection);
+      }
 
 }
 
